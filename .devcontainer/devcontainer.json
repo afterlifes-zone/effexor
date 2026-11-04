@@ -1,0 +1,21 @@
+{
+  "name": "Fedora Codespace Effexor",
+  "build": { "dockerfile": "Dockerfile" },
+  "remoteUser": "codespace",
+  "privileged": true,
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "runArgs": [
+    "--privileged",
+    "--shm-size=2gb",
+    "--device=/dev/fuse",
+    "--device=/dev/net/tun",
+    "--device=/dev/kvm",
+    "--cap-add=SYS_ADMIN",
+    "--cap-add=NET_ADMIN",
+    "--cap-add=SYS_PTRACE",
+    "--security-opt=apparmor:unconfined",
+    "--security-opt=seccomp:unconfined"
+  ]
+}
