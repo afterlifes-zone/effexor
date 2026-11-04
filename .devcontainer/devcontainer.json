@@ -4,7 +4,9 @@
   "remoteUser": "codespace",
   "privileged": true,
   "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "moby": false
+    }
   },
   "runArgs": [
     "--privileged",
